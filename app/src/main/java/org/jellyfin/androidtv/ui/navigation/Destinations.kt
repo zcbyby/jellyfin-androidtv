@@ -2,6 +2,7 @@ package org.jellyfin.androidtv.ui.navigation
 
 import kotlinx.serialization.json.Json
 import org.jellyfin.androidtv.constant.Extras
+import org.jellyfin.androidtv.ui.browsing.AppListFragment
 import org.jellyfin.androidtv.ui.browsing.BrowseGridFragment
 import org.jellyfin.androidtv.ui.browsing.BrowseRecordingsFragment
 import org.jellyfin.androidtv.ui.browsing.BrowseScheduleFragment
@@ -33,6 +34,7 @@ import java.util.UUID
 object Destinations {
 	// General
 	val home = fragmentDestination<HomeFragment>()
+	val appList = fragmentDestination<AppListFragment>()
 	fun search(query: String? = null) = fragmentDestination<SearchFragment>(
 		SearchFragment.EXTRA_QUERY to query,
 	)
